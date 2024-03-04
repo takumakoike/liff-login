@@ -20,5 +20,8 @@ liff.init({liffId: LIFF_ID})
                                 text: "Hello, World!",
                             }
                         ])
+                        .catch((err) => {
+                            console.log("error", err);
+                          });
                 })
         }})
