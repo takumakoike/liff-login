@@ -13,6 +13,12 @@ liff.init({liffId: LIFF_ID})
 
                     document.getElementById("info-id").textContent = `ID：${id}`
                     document.getElementById("info-name").textContent = `名前：${name}`
+
+                    liff.sendMessages([
+                            {
+                                type: "text",
+                                text: "Hello, World!",
+                            }
+                        ])
                 })
-        }
-    })
+        }})
