@@ -15,14 +15,14 @@ liff.init({liffId: LIFF_ID})
                     document.getElementById("info-name").textContent = `名前：${name}`
                     document.getElementById("token").textContent = `トークン：${liff.getAccessToken()}`
                     
-                    // liff.sendMessages([
-                    //         {
-                    //             type: "text",
-                    //             text: "Hello, World!",
-                    //         }
-                    //     ])
-                    //     .catch((err) => {
-                    //         console.log("error", err);
-                    //       });
+                    liff.sendMessages([
+                            {
+                                type: "text",
+                                text: "Hello, World!",
+                            }
+                        ])
+                        .catch((err) => {
+                            console.log("error", err);
+                        });
                 })
         }})
