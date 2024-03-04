@@ -6,5 +6,13 @@ liff.init({liffId: LIFF_ID})
             liff.login();
         } else {
             document.getElementById("title").textContent = "ログインしました";
+            liff.getProfile()
+                .then((profile) => {
+                    const id = profile.userId;
+                    const name = profile.displayName;
+
+                    document.getElementById("info-id").textContent = `ID：${id}`
+                    document.getElementById("info-name").textContent = `名前：${name}`
+                })
         }
     })
